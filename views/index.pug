@@ -74,11 +74,11 @@ block content
                           a.view.btn-sm.active(href='#') View Profile
         .user-dashboard
           h1 Hello, Time Tracking
-          //TODO create a dynamic text for real time
+
           h2
           .timeBtn
-            button.btn.btn-primary Start
-            button.btn.btn-primary End
+            button#btn_start.btn.btn-primary Start
+            button#btn_end.btn.btn-primary End
           .row
             .col-md-5.col-sm-5.col-xs-12.gutter
               .sales
@@ -95,7 +95,6 @@ block content
                       a(href='#') 2016
 
 
-            //TODO add a form to see the history
             .col-md-7.col-sm-7.col-xs-12.gutter
               .sales.report
                 h2 Report
@@ -108,6 +107,20 @@ block content
                     a(href='#') 2014
                     a(href='#') 2015
                     a(href='#') 2016
+            .historyTable
+              table.table
+                thead
+                  tr
+                    th(scope='col') #
+                    th(scope='col') Start
+                    th(scope='col') End
+                    th(scope='col') Remark
+                tbody
+                  tr
+                    th(scope='row') 1
+                    td test
+                    td test
+                    td test
   // Modal
   #add_project.modal.fade(role='dialog')
     .modal-dialog
@@ -124,4 +137,7 @@ block content
         .modal-footer
           button.cancel(type='button', data-dismiss='modal') Close
           button.add-project(type='button', data-dismiss='modal') Save
+
+  script
+    include ../public/javascripts/index.js
 
