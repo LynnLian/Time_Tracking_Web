@@ -16,7 +16,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="UTF-8" />
+      <charset value="windows-1252" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -27,7 +27,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="1811d52e-cad8-495e-bc1d-1b5394cd20b8">
-      <console name="Connection" type="STANDARD"><![CDATA[select *from records]]></console>
+      <console name="Connection" type="STANDARD" />
     </connection>
     <connection id="9fc68459-68b4-4dd0-b590-110824777885">
       <console name="Connection 1" type="STANDARD" />
@@ -361,6 +361,7 @@
           <content-type name="JSPx" enabled="true" />
           <content-type name="ASP" enabled="true" />
           <content-type name="YAML" enabled="true" />
+          <content-type name="Bash" enabled="true" />
         </content-types>
       </qualified-text-editor>
       <record-navigation>
