@@ -15,24 +15,22 @@ block content
   .history
 
     h2 Record:
-    select
+    select#drop_search_days
       option(value="10") Last 10 days
       option(value="30") Last 30 days
       option(value="90") Last 90 days
       option(value="180") Last 180 days
 
+    buttonbutton#btn_search.btn.btn-primary(type="button") Search
 
-  table.table
-    thead
+
+  table#tableHistory
+    thead#tableHistoryHead
       tr
         th(scope="col") #
         th(scope="col") Start
         th(scope="col") End
-      tr
-        th(scope="row") 1
-        td test
-        td test
-      tr
-        th(scope="row") 2
-        td test
-        td test
+
+
+  script
+    include ../public/javascripts/index.js
