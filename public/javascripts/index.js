@@ -1,22 +1,20 @@
 $(document).ready(() => {
-    console.log("javascripts loaded!");
+  console.log("index.js is loaded!")
 });
 
-
 $('#btn_start').click(() => {
-    let startTime = $.now();
+  let startTime = Math.floor($.now()/1000);
 
-    console.log(window.location.pathname);
 
-    $.ajax({
-        url: 'start',
-        type: 'POST',
-        data: {
-            startTime: startTime
-        }
-    }).done(result => {
-        console.log('Result of AJAX: ', result);
-    });
+  //TODO: later I want to add .fail .always in the scenario
+  $.post("/start", {startTime: startTime}).done(function () {
+    console.log("Post startTime is done.")
 
-    console.log("The button is click!");
+  });
+
+  console.log("clicked.")
+
+
+
+
 });

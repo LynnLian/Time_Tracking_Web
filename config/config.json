@@ -5,15 +5,16 @@
     "database": "database_development",
     "host": "127.0.0.1",
     "dialect": "sqlite",
-    "storage": "./database.sqlite",
-    "operatorsAliases": false
+    "operatorsAliases": false,
+    "storage": "./database.sqlite"
+
   },
+
   "production": {
     "username": "root",
-    "password": "IchLiebeDich",
-    "database": "Time_Tracking_db_production",
-    "host": "localhost",
-    "port": "3306",
-    "dialect": "mysql"
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "sqlite"
   }
 }
